@@ -10,8 +10,7 @@
 #  updated_at      :datetime         not null
 #
 
-class User < ActiveRecord::Base
-  # Monkey-patch to create unique token method
+# Monkey-patch ActiveRecord::Base to create unique token method
 
 class ActiveRecord::Base
   def generate_unique_token_for_field(field)
